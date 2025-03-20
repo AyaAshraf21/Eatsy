@@ -1,8 +1,8 @@
 import 'package:eatsy/core/themes/theme_colors.dart';
+import 'package:eatsy/feature/profile/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'feature/profile/presentation/pages/splash_screen.dart';
 import 'generated/l10n.dart';
 
 void main() {

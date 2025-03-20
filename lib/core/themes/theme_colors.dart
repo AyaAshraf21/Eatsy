@@ -34,8 +34,9 @@ final ThemeData lightTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      textStyle: TextStyle(fontSize: 18),
       backgroundColor: primaryColor,
-      foregroundColor: Colors.white, // Text color
+      foregroundColor: surfaceColorLight,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
@@ -58,8 +59,6 @@ final ThemeData lightTheme = ThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ),
   inputDecorationTheme: InputDecorationTheme(
-    filled: true,
-    fillColor: surfaceColorLight,
     labelStyle: TextStyle(color: textPrimaryColorLight),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
@@ -67,6 +66,10 @@ final ThemeData lightTheme = ThemeData(
     ),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: primaryColor, width: 2),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(10),
+      borderSide: BorderSide(color: Color(0xFF757575)),
     ),
   ),
   dividerColor: Colors.grey.shade300,
@@ -114,8 +117,9 @@ final ThemeData darkTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
+      textStyle: TextStyle(fontSize: 18),
       backgroundColor: primaryColor,
-      foregroundColor: Colors.white, // Text color
+      foregroundColor: surfaceColorDark,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ),
@@ -138,8 +142,6 @@ final ThemeData darkTheme = ThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   ),
   inputDecorationTheme: InputDecorationTheme(
-    filled: true,
-    fillColor: surfaceColorDark,
     labelStyle: TextStyle(color: textPrimaryColorDark),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
@@ -147,6 +149,12 @@ final ThemeData darkTheme = ThemeData(
     ),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: primaryColor, width: 2),
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(10),
+      borderSide: BorderSide(
+        color: Color(0xFF757575),
+      ),
     ),
   ),
   dividerColor: Colors.grey.shade700,

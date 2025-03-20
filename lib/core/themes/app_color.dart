@@ -27,3 +27,13 @@ const Color errorColorLight = Color(0xFFD32F2F);
 //dark mode
 const Color successColorDark = Color(0xFF81C784);
 const Color errorColorDark = Color(0xFFE57373);
+
+/// Gradient Colors
+const LinearGradient gradientColor = LinearGradient(
+  colors: [
+    Color(0xFFFFC107),
+    Color(0xFFFF5722),
+  ],
+  begin: Alignment.topLeft,
+  end: Alignment.bottomRight,
+);

@@ -1,8 +1,9 @@
 import 'dart:async';
 
+import 'package:eatsy/feature/profile/presentation/pages/signin_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'onboarding_screen.dart';
+import '../../../../core/themes/app_color.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacement(context, FadeRoute(page: OnboardingScreen()));
+      Navigator.pushReplacement(context, FadeRoute(page: SignInScreen()));
     });
   }
 
@@ -45,14 +46,7 @@ class _SplashScreenState extends State<SplashScreen>
         builder: (context, child) {
           return Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFFFFC107),
-                  Color(0xFFFF5722),
-                ],
-              ),
+              gradient: gradientColor,
             ),
             child: Stack(
               children: [
