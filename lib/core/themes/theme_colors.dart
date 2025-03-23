@@ -25,7 +25,10 @@ final ThemeData lightTheme = ThemeData(
     iconTheme: IconThemeData(color: Colors.white),
   ),
   textTheme: TextTheme(
-    bodyLarge: TextStyle(color: textPrimaryColorLight, fontSize: 18),
+    bodyLarge: TextStyle(
+        color: textPrimaryColorLight,
+        fontSize: 20,
+        fontWeight: FontWeight.bold),
     bodyMedium: TextStyle(color: textSecondaryColorLight, fontSize: 16),
     titleLarge: TextStyle(
         color: textPrimaryColorLight,
@@ -35,7 +38,7 @@ final ThemeData lightTheme = ThemeData(
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       textStyle: TextStyle(fontSize: 18),
-      backgroundColor: primaryColor,
+      backgroundColor: Colors.transparent,
       foregroundColor: surfaceColorLight,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),

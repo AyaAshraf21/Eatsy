@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:eatsy/feature/profile/presentation/pages/signin_screen.dart';
+import 'package:eatsy/feature/profile/presentation/pages/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/themes/app_color.dart';
@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     Timer(Duration(seconds: 4), () {
-      Navigator.pushReplacement(context, FadeRoute(page: SignInScreen()));
+      Navigator.pushReplacement(context, FadeRoute(page: OnboardingScreen()));
     });
   }
 

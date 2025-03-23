@@ -94,11 +94,17 @@ class SignInScreen extends StatelessWidget {
                     SizedBox(height: 20),
 
                     // Sign In Button
-                    SizedBox(
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          gradient: gradientColor),
                       width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text("Sign In"),
+                      child: Center(
+                        child: ElevatedButton(
+                          // backgroundColor: Colors.transparent,
+                          onPressed: () {},
+                          child: Text("Sign In"),
+                        ),
                       ),
                     ),
 
@@ -121,11 +127,11 @@ class SignInScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        circleAvatar('assets/google.png'),
+                        circleAvatar('assets/icons/google.png'),
                         SizedBox(width: 15),
-                        circleAvatar('assets/facebook.png'),
+                        circleAvatar('assets/icons/facebook.png'),
                         SizedBox(width: 15),
-                        circleAvatar('assets/apple.png'),
+                        circleAvatar('assets/icons/apple.png'),
                       ],
                     ),
 
