@@ -4,6 +4,8 @@ import 'package:eatsy/feature/profile/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:square_percent_indicater/square_percent_indicater.dart';
 
+import '../widgets/circle_background.dart';
+
 void main() {
   runApp(MaterialApp(home: OnboardingScreen()));
 }
@@ -81,33 +83,42 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Positioned(
                         top: MediaQuery.of(context).size.height * 0.11,
                         left: 20,
-                        child: circleBackground(width: 35, height: 35)),
+                        child: CircleBackground(
+                          width: 35,
+                          height: 35,
+                          gradientColor: gradientColor,
+                        )),
                     Positioned(
                         top: MediaQuery.of(context).size.height * 0.06,
                         right: -25,
-                        child: circleBackground(width: 57, height: 75)),
+                        child: CircleBackground(
+                            width: 57,
+                            height: 75,
+                            gradientColor: gradientColor)),
                     Positioned(
                       top: MediaQuery.of(context).size.height * 0.53,
                       left: -25,
-                      child: circleBackground(width: 57, height: 57),
+                      child: CircleBackground(
+                          width: 57, height: 57, gradientColor: gradientColor),
                     ),
                     Positioned(
                       top: MediaQuery.of(context).size.height * 0.48,
                       right: 20,
-                      child: circleBackground(width: 35, height: 35),
+                      child: CircleBackground(
+                          width: 35, height: 35, gradientColor: gradientColor),
                     ),
                     Positioned(
-                      top: MediaQuery.of(context).size.height *
-                          0.09, // Adjust the spacing of the text below the image
-                      left: 0,
-                      right: 0,
-                      child: circleBackground(
-                          context: context,
+                        top: MediaQuery.of(context).size.height *
+                            0.09, // Adjust the spacing of the text below the image
+                        left: 0,
+                        right: 0,
+                        child: CircleBackground(
                           image: Image.asset(onboardingData[index]["image"]!,
                               height: getImageHeight(index, context)),
                           width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.width),
-                    ),
+                          height: MediaQuery.of(context).size.width,
+                          gradientColor: gradientColor,
+                        )),
                     SizedBox(height: 50),
                     Positioned(
                       top: MediaQuery.of(context).size.height * 0.6,
@@ -178,24 +189,6 @@ Widget rectangleIcon(Widget widget) {
       child: Center(
         child: widget,
       ),
-    ),
-  );
-}
-
-Widget circleBackground(
-    {BuildContext? context,
-    Image? image,
-    required double width,
-    required double height}) {
-  return Container(
-    width: width,
-    height: height,
-    decoration: BoxDecoration(
-      shape: BoxShape.circle,
-      gradient: gradientColor,
-    ),
-    child: Center(
-      child: image,
     ),
   );
 }

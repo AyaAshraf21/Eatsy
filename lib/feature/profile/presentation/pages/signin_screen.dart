@@ -1,3 +1,5 @@
+import 'package:eatsy/core/widgets/default_button.dart';
+import 'package:eatsy/feature/profile/presentation/widgets/circle_background.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/themes/app_color.dart';
@@ -94,19 +96,7 @@ class SignInScreen extends StatelessWidget {
                     SizedBox(height: 20),
 
                     // Sign In Button
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          gradient: gradientColor),
-                      width: double.infinity,
-                      child: Center(
-                        child: ElevatedButton(
-                          // backgroundColor: Colors.transparent,
-                          onPressed: () {},
-                          child: Text("Sign In"),
-                        ),
-                      ),
-                    ),
+                    DefaultButton(),
 
                     SizedBox(height: 20),
 
@@ -127,11 +117,32 @@ class SignInScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        circleAvatar('assets/icons/google.png'),
+                        CircleBackground(
+                          width: 45,
+                          height: 45,
+                          color: Theme.of(context).colorScheme.surface,
+                          imagePath: 'assets/icons/google.png',
+                          assetWidth: 30,
+                          assetHeight: 30,
+                        ),
                         SizedBox(width: 15),
-                        circleAvatar('assets/icons/facebook.png'),
+                        CircleBackground(
+                          width: 45,
+                          height: 45,
+                          color: Theme.of(context).colorScheme.surface,
+                          imagePath: 'assets/icons/facebook.png',
+                          assetWidth: 30,
+                          assetHeight: 30,
+                        ),
                         SizedBox(width: 15),
-                        circleAvatar('assets/icons/apple.png'),
+                        CircleBackground(
+                          width: 45,
+                          height: 45,
+                          color: Theme.of(context).colorScheme.surface,
+                          imagePath: 'assets/icons/apple.png',
+                          assetWidth: 30,
+                          assetHeight: 30,
+                        ),
                       ],
                     ),
 
@@ -176,18 +187,6 @@ class SignInScreen extends StatelessWidget {
         assetPath,
         height: 40,
         width: 40,
-      ),
-    );
-  }
-
-  Widget circleAvatar(String assetPath) {
-    return CircleAvatar(
-      radius: 25,
-      backgroundColor: Color(0xFFEEEAEA),
-      child: Image.asset(
-        assetPath,
-        height: 30,
-        width: 30,
       ),
     );
   }

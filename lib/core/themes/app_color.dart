@@ -7,10 +7,10 @@ const Color secondaryColor = Color(0xFFFF9407); //0xFFFFC107
 /// Background Colors
 // light mode
 const Color backgroundColorLight = Color(0xFFFFFFFF);
-const Color surfaceColorLight = Color(0xFFF5F5F5);
+const Color surfaceColorLight = Color(0xFFEAEAEA);
 //dark mode
 const Color backgroundColorDark = Color(0xFF121212);
-const Color surfaceColorDark = Color(0xFF1E1E1E);
+const Color surfaceColorDark = Color(0xFF2C2B2B);
 
 /// Text Colors
 //light mode
