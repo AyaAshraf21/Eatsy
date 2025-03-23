@@ -1,3 +1,4 @@
+import 'package:eatsy/core/themes/app_color.dart';
 import 'package:flutter/material.dart';
 
 class DefaultTextField extends StatelessWidget {
@@ -20,14 +21,13 @@ class DefaultTextField extends StatelessWidget {
       obscureText: obscureText ?? false,
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: TextStyle(color: Color(0xFF757575), fontSize: 14),
+        labelStyle: TextStyle(color: textSecondaryColorDark, fontSize: 14),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         prefixIconColor: Color(0xFF757575),
         suffixIconColor: Color(0xFF757575),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Color(0xFF757575)),
         ),
       ),
     );

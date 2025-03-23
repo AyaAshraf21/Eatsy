@@ -1,7 +1,7 @@
+import 'package:eatsy/core/routes/app_routes.dart';
 import 'package:eatsy/core/themes/app_color.dart';
-import 'package:eatsy/feature/profile/presentation/pages/signin_screen.dart';
-import 'package:eatsy/feature/profile/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:square_percent_indicater/square_percent_indicater.dart';
 
 import '../widgets/circle_background.dart';
@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _controller.nextPage(
           duration: Duration(milliseconds: 200), curve: Curves.ease);
     } else {
-      Navigator.pushReplacement(context, FadeRoute(page: SignInScreen()));
+      Get.offNamed(AppRoutes.signInScreen);
     }
   }
 

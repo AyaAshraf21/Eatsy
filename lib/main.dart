@@ -1,8 +1,10 @@
 import 'package:eatsy/core/themes/theme_colors.dart';
-import 'package:eatsy/feature/profile/presentation/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 
+import 'core/routes/app_pages.dart';
+import 'core/routes/app_routes.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: Locale('en'),
-      home: SplashScreen(),
+      initialRoute: AppRoutes.signUpScreen,
+      getPages: AppPages.pages,
     );
   }
 }

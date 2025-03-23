@@ -25,14 +25,11 @@ final ThemeData lightTheme = ThemeData(
     iconTheme: IconThemeData(color: Colors.white),
   ),
   textTheme: TextTheme(
-    bodyLarge: TextStyle(
-        color: textPrimaryColorLight,
-        fontSize: 20,
-        fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(color: textPrimaryColorLight, fontSize: 18),
     bodyMedium: TextStyle(color: textSecondaryColorLight, fontSize: 16),
     titleLarge: TextStyle(
         color: textPrimaryColorLight,
-        fontSize: 22,
+        fontSize: 20,
         fontWeight: FontWeight.bold),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
@@ -72,7 +69,7 @@ final ThemeData lightTheme = ThemeData(
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide(color: Color(0xFF757575)),
+      borderSide: BorderSide(color: textSecondaryColorDark),
     ),
   ),
   dividerColor: Colors.grey.shade300,

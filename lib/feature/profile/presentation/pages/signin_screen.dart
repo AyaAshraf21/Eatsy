@@ -1,6 +1,8 @@
+import 'package:eatsy/core/routes/app_routes.dart';
 import 'package:eatsy/core/widgets/default_button.dart';
 import 'package:eatsy/feature/profile/presentation/widgets/circle_background.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../core/themes/app_color.dart';
 import '../widgets/defual_text_field.dart';
@@ -164,7 +166,9 @@ class SignInScreen extends StatelessWidget {
                             minimumSize: Size(0, 0),
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.offAllNamed(AppRoutes.signUpScreen);
+                          },
                           child: Text("Create An Account"),
                         ),
                       ],
