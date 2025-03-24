@@ -89,7 +89,10 @@ class SignInScreen extends StatelessWidget {
                           ],
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            // Get.toNamed(AppRoutes.forgetPasswordEmail);
+                            Get.toNamed(AppRoutes.forgetPasswordPhone);
+                          },
                           child: Text("Forgot Password?"),
                         ),
                       ],
@@ -98,7 +101,10 @@ class SignInScreen extends StatelessWidget {
                     SizedBox(height: 20),
 
                     // Sign In Button
-                    DefaultButton(),
+                    DefaultButton(
+                      text: 'Sign In',
+                      onPressed: () {},
+                    ),
 
                     SizedBox(height: 20),
 

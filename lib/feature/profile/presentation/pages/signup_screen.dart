@@ -79,7 +79,10 @@ class SignUpScreen extends StatelessWidget {
 
                   SizedBox(height: 20),
 
-                  DefaultButton(),
+                  DefaultButton(
+                    text: 'Sign Up',
+                    onPressed: () {},
+                  ),
 
                   SizedBox(height: 20),
 

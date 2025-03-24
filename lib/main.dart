@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: Locale('en'),
-      initialRoute: AppRoutes.signUpScreen,
+      initialRoute: AppRoutes.splashScreen,
       getPages: AppPages.pages,
     );
   }
